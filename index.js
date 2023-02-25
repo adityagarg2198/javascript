@@ -16,4 +16,10 @@ buttonElement.addEventListener("click", (e) => {
   li.textContent=value;
   li.appendChild(checkButton);
   listElement.appendChild(li);
+  const todoItems=document.querySelectorAll('li');
+  todoItems.forEach(element => {
+    element.firstElementChild.addEventListener('click',()=>{
+      console.log(element.innerText);
+    })
+  });
 });
