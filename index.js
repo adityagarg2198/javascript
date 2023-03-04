@@ -12,14 +12,14 @@ buttonElement.addEventListener("click", (e) => {
   e.preventDefault();
   const li = document.createElement("li");
   const checkButton = document.createElement("button");
-  checkButton.textContent="Check";
-  li.textContent=value;
+  checkButton.textContent = "Check";
+  li.textContent = value;
   li.appendChild(checkButton);
   listElement.appendChild(li);
-  const todoItems=document.querySelectorAll('li');
-  todoItems.forEach(element => {
-    element.firstElementChild.addEventListener('click',()=>{
-      console.log(element.innerText);
-    })
+  const todoItems = document.querySelectorAll("li");
+  todoItems.forEach((element) => {
+    element.firstElementChild.addEventListener("click", () => {
+      element.classList.toggle("tick");
+    });
   });
 });
